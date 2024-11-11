@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluxTeam - Downloads</title>
+    <meta content="A Fresh Execution Experience" property="og:description" />
+    <link rel="icon" type="png" href="fluxlogo.png">
+
+   
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        :root {
+            --background: #0f0f0f;
+            --text: #ffffff;
+            --accent: #b088f9;
+            --button: #9370DB;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: radial-gradient(circle at center, rgba(176, 136, 249, 0.2) 0%, rgba(15, 15, 15, 0) 70%);
+        }
+        header {
+            padding: 1rem 2rem;
+            background-color: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(5px);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 1.5rem;
+        }
+        nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .download-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;
+            max-width: 350px;
+            width: 100%;
+        }
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(176, 136, 249, 0.2);
+        }
+        .download-card h2 {
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            font-size: 1.75rem;
+        }
+        .download-card p {
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+        .download-button {
+            display: inline-block;
+            background-color: var(--button);
+            color: var(--text);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .download-button:hover {
+            background-color: #8d73b0;
+            transform: translateY(-2px);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <header>
+            <nav>
+                <ul>
+                    <li><a href='/home'>Home</a></li>
+                    <li><a href='/windows'>Windows</a></li>
+                    <li><a href='/android'>Android</a></li>
+                    <li><a href='/ios'>IOS</a></li>
+                    <li><a href="https://discord.gg/fluxus">Discord</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Download FluxTeam</h1>
+            <div class="download-card">
+                <h2>Windows</h2>
+                <p>Download the latest version for Windows</p>
+                <a class='download-button' href='/windows'>Download for Windows</a>
+            </div>
+        </main>
+        <main>
+           
+            <div class="download-card">
+                <h2>Android</h2>
+                <p>Download the latest version for Android</p>
+                <a class='download-button' href='/android'>Download for Android</a>
+            </div>
+        </main>
+        <main>
+           
+            <div class="download-card">
+                <h2>IOS</h2>
+                <p>Download the latest version for IOS</p>
+                <a class='download-button' href='/ios'>Download for IOS</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
